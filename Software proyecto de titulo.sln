@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUI", "SoftUI\SoftUI.csproj", "{D9595E16-D1EA-430E-AE54-A32D6C5C26EC}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GESTPLUS", "GESTPLUS\GESTPLUS.vdproj", "{543D740E-64F7-4C16-A267-F55AC1FCC111}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9595E16-D1EA-430E-AE54-A32D6C5C26EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9595E16-D1EA-430E-AE54-A32D6C5C26EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9595E16-D1EA-430E-AE54-A32D6C5C26EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9595E16-D1EA-430E-AE54-A32D6C5C26EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543D740E-64F7-4C16-A267-F55AC1FCC111}.Debug|Any CPU.ActiveCfg = Debug
+		{543D740E-64F7-4C16-A267-F55AC1FCC111}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E0E07FA-63A8-4774-AF19-B08FCDB9D793}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,269 @@
+﻿<UserControl x:Class="SoftUI.MVVM.View.Cal_Sueldo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoftUI.MVVM.View"
+             xmlns:viewModel="clr-namespace:SoftUI.MVVM.ViewModel"
+                           mc:Ignorable="d" 
+         d:DesignHeight="450" d:DesignWidth="900">
+
+
+    <UserControl.DataContext>
+        <viewModel:MainViewModel/>
+    </UserControl.DataContext>
+
+
+    <StackPanel>
+
+        <Grid>
+
+            <ContentControl x:Name="ConsProd" Margin="0,0,0,-454" Visibility="Visible"/>
+
+        </Grid>
+
+
+        <StackPanel x:Name="Main">
+
+            <TextBlock Text="Calcula los sueldos de tus Empleados"
+       Foreground="White"
+       FontSize="28"
+
+       Margin="0,5,350,0"
+       FontFamily="/Fonts/#Roboto" FontWeight="SemiBold" Width="514"
+                   HorizontalAlignment="Stretch">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <StackPanel Orientation="Horizontal"
+                Height="410"
+                Width="288"
+                HorizontalAlignment="Right"
+                Margin="0,0,20,0">
+                <Grid Width="288" Height="408" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="116"/>
+                        <RowDefinition Height="4"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Horas Trabajadas" HorizontalAlignment="Left" Margin="-68,7,0,0" VerticalAlignment="Top" Width="168" Foreground="#FFFBFBFB" FontSize="20" Height="36" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+
+
+                    </Label>
+
+                    <TextBox x:Name="textHTrabajadas" HorizontalAlignment="Left" Padding="0" Margin="-6,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="46" Height="26" FontFamily="/Fonts/#Roboto" FontSize="20" TextChanged="textHTrabajadas_TextChanged" PreviewTextInput="TextBox_PreviewTextInput" TextAlignment="Center">
+                        <TextBox.Effect>
+                            <DropShadowEffect/>
+                        </TextBox.Effect>
+                    </TextBox>
+
+                    <Label Content="Horas Extra" HorizontalAlignment="Left" Margin="135,7,0,0" VerticalAlignment="Top" Width="114" Foreground="#FFFBFBFB" FontSize="20" Height="30" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+
+
+                    </Label>
+
+
+                    <Border
+                    Height="68"
+                    VerticalAlignment="Top"
+                    Margin="10,183,104,0" Grid.Row="2">
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="DarkOrange" Offset="0.20"/>
+                                <GradientStop Color="Black" Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <TextBlock Text="Volver"
+                           Foreground="White"
+                           FontSize="20"  
+                           Margin="56,20,0,20"
+                           HorizontalAlignment="Left"
+                           FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                            <TextBlock.Effect>
+                                <DropShadowEffect/>
+                            </TextBlock.Effect>
+
+                        </TextBlock>
+
+
+                    </Border>
+
+                    <Button x:Name="ButRegre"
+                    Height="74"
+                    VerticalAlignment="Top"
+                    BorderThickness="3"
+                    Visibility="Visible"
+                    Cursor="Hand"
+                    Background="Transparent" 
+                    Margin="10,180,103,0"
+                    Click="ButRegre_Click"
+                    Style="{StaticResource ButtonTheme}" Grid.Row="2"/>
+                    <TextBox x:Name="textHExtras" HorizontalAlignment="Left" Padding="0" Margin="168,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="46" Height="26" FontFamily="/Fonts/#Roboto" FontSize="20" TextChanged="textHExtras_TextChanged" PreviewTextInput="TextBox_PreviewTextInput " TextAlignment="Center">
+                        <TextBox.Effect>
+                            <DropShadowEffect/>
+                        </TextBox.Effect>
+                    </TextBox>
+                    <Label Content="Sueldo Bruto:" HorizontalAlignment="Left" Margin="-67,74,0,0" VerticalAlignment="Top" Width="131" Foreground="#FFFBFBFB" FontSize="20" Height="36" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold" Grid.Row="2">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+
+
+                    </Label>
+                    <Label Content="Sueldo Liquido:" HorizontalAlignment="Left" Margin="-68,115,0,0" VerticalAlignment="Top" Width="148" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold" Grid.Row="2">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+
+
+                    </Label>
+                    <Label x:Name="LabelSBruto"
+       Content="{Binding SueldoBruto, StringFormat='{}{0:C0}'}"
+       HorizontalAlignment="Left"
+       Margin="64,73,0,0"
+       VerticalAlignment="Top"
+       Width="185"
+       Foreground="#FFFBFBFB"
+       FontSize="20"
+       Height="37"
+       FontFamily="/Fonts/#Roboto"
+       FontWeight="SemiBold"
+       RenderTransformOrigin="0.375,0.477"
+       Grid.Row="2">
+                        <Label.Effect>
+                            <DropShadowEffect ShadowDepth="3" Direction="315" Color="Black" Opacity="0.6"/>
+                        </Label.Effect>
+                    </Label>
+                    <Label x:Name="LabelSLiquido"
+      Content="{Binding SueldoBruto, StringFormat='{}{0:C0}'}"
+       HorizontalAlignment="Left"
+       Margin="80,115,0,0"
+       VerticalAlignment="Top"
+       Width="193"
+       Foreground="#FFFBFBFB"
+       FontSize="20"
+       Height="37"
+       FontFamily="/Fonts/#Roboto"
+       FontWeight="SemiBold"
+       RenderTransformOrigin="0.375,0.477"
+       Grid.Row="2">
+                        <Label.Effect>
+                            <DropShadowEffect ShadowDepth="3" Direction="315" Color="Black" Opacity="0.6"/>
+                        </Label.Effect>
+                    </Label>
+                    <ComboBox x:Name="comboAFP" HorizontalAlignment="Left" FontSize="19" DisplayMemberPath="" IsEnabled="false" VerticalAlignment="Top" Width="128" Margin="-48,114,0,0"
+                  SelectionChanged="comboAFP_SelectionChanged" Height="29" FontFamily="/Fonts/#Roboto" FontWeight="Regular" Grid.RowSpan="3">
+                        <ComboBoxItem Content="CUPRUM" />
+                        <ComboBoxItem Content="MODELO" />
+                        <ComboBoxItem Content="CAPITAL" />
+                        <ComboBoxItem Content="PROVIDA" />
+                    </ComboBox>
+                    <ComboBox x:Name="comboISAPRE" FontSize="19" IsEnabled="false" SelectedValuePath="IdReg" DisplayMemberPath="" Margin="126,114,34,265" Grid.RowSpan="3" SelectionChanged="comboISAPRE_SelectionChanged" FontFamily="/Fonts/#Roboto" FontWeight="Regular">
+                        <ComboBoxItem Content="FONASA" />
+                        <ComboBoxItem Content="CONSALUD" />
+                        <ComboBoxItem Content="MASVIDA" />
+                        <ComboBoxItem Content="BANMEDICA" />
+                    </ComboBox>
+                    <Label Content="AFP" HorizontalAlignment="Left" Margin="-8,79,0,0" VerticalAlignment="Top" Width="48" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+
+
+                    </Label>
+                    <Label Content="Isapre" HorizontalAlignment="Left" Margin="156,78,0,0" VerticalAlignment="Top" Width="70" Foreground="#FFFBFBFB" FontSize="20" Height="38" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+
+
+                    </Label>
+                    <Label x:Name="LabelDAFP" Content="" HorizontalAlignment="Left" Margin="-48,23,0,0" VerticalAlignment="Top" Width="128" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold" RenderTransformOrigin="0.375,0.477" Grid.Row="2">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+
+
+                    </Label>
+                    <Label x:Name="LabelDISAPRE" Content="" HorizontalAlignment="Left" Margin="126,23,0,0" VerticalAlignment="Top" Width="128" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold" RenderTransformOrigin="0.375,0.477" Grid.Row="2">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+
+
+
+                    </Label>
+                    <TextBox x:Name="textValH" HorizontalAlignment="Left" Padding="0" Margin="-48,-24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66" Height="26" FontFamily="/Fonts/#Roboto" FontSize="20" Visibility="Hidden" IsReadOnly="True">
+                        <TextBox.Effect>
+                            <DropShadowEffect/>
+                        </TextBox.Effect>
+                    </TextBox>
+                    <TextBox x:Name="textValHX" HorizontalAlignment="Left" Padding="0" Margin="32,-23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="68" Height="25" FontFamily="/Fonts/#Roboto" FontSize="20" Visibility="Hidden" IsReadOnly="True">
+                        <TextBox.Effect>
+                            <DropShadowEffect/>
+                        </TextBox.Effect>
+                    </TextBox>
+
+
+                </Grid>
+
+
+
+
+
+
+            </StackPanel>
+
+            <Grid Height="385"
+          Width="463" 
+          HorizontalAlignment="Left"  
+          Margin="0,-450,0,0">
+
+                <DataGrid x:Name="GridInv" 
+                      AutoGenerateColumns="False"
+                      SelectionChanged="GridInv_SelectionChanged"
+                      Margin="19,20,-14,-14"
+                      IsReadOnly="True"
+                      FontFamily="/Fonts/#Roboto"
+                      FontSize="13"
+                      CanUserResizeColumns="False"
+                      CanUserReorderColumns="True" Background="#FF181921">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding IdTra}" Visibility="Hidden" Width="92"/>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="100"/>
+                        <DataGridTextColumn Header="Rut" Binding="{Binding Rut}" Width="100"/>
+                        <DataGridTextColumn Header="Valor Hora" Binding="{Binding VaHo}" Width="100"/>
+                        <DataGridTextColumn Header="Valor Hora Extra" Binding="{Binding VaHoEx}" Width="150"/>
+                    </DataGrid.Columns>
+
+                    <DataGrid.Effect>
+                        <DropShadowEffect/>
+                    </DataGrid.Effect>
+
+
+                </DataGrid>
+
+
+
+
+            </Grid>
+
+
+
+        </StackPanel>
+
+
+    </StackPanel>
+</UserControl>

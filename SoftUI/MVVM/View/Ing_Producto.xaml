@@ -1,0 +1,123 @@
+﻿<Window x:Class="SoftUI.MVVM.View.Ing_Producto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SoftUI.MVVM.View"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Background="Transparent"
+        Loaded="Window_Loaded"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Title="Ing_Producto" Height="500" Width="400">
+    <Border
+            Height="500"
+            CornerRadius="30"
+            >
+
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,50" EndPoint="0,0">
+                <GradientStop Color="#6C5B7B" Offset="0.0"/>
+                <GradientStop Color="Black" Offset="1.2"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid Height="500" VerticalAlignment="Center">
+
+
+            <TextBox x:Name="textCantF" HorizontalAlignment="Center" Padding="0" Margin="0,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286" Height="25" FontFamily="/Fonts/#Roboto" FontSize="20" TextChanged="OnValueChanged">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="textFechIngF" HorizontalAlignment="Center" Padding="0" Margin="0,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286" Height="25" FontFamily="/Fonts/#Roboto"  FontSize="20" >
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="textValXuF" HorizontalAlignment="Center"  Padding="0" Margin="0,278,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286" Height="25" FontFamily="/Fonts/#Roboto" FontSize="20" TextChanged="OnValueChanged">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="textValTotF" HorizontalAlignment="Center" Padding="0" Margin="0,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286" Height="25" FontFamily="/Fonts/#Roboto" FontSize="20" IsReadOnly="True">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="textNombF" HorizontalAlignment="Center" Padding="0" Margin="0,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286" Height="25" FontFamily="/Fonts/#Roboto" FontSize="20">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="textIdProductos" HorizontalAlignment="Left" Margin="31,512,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="118" Height="30"/>
+            <Label Content="Nombre" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="82" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Fecha de Ingreso" HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" Width="172" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Cantidad" HorizontalAlignment="Center" Margin="0,163,0,0" VerticalAlignment="Top" Width="96" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Valor por Unidad" HorizontalAlignment="Center" Margin="0,241,0,0" VerticalAlignment="Top" Width="160" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Valor Total" HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top" Width="108" Foreground="#FFFBFBFB" FontSize="20" Height="37" FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+
+
+            <Border Margin="270,434,22,24">
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#CB4335" Offset="0.0"/>
+                        <GradientStop Color="#17202A" Offset="1."/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <Border Margin="24,435,268,25">
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="DarkGreen" Offset="0.0"/>
+                        <GradientStop Color="LightGreen" Offset="1.2"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <Border Margin="152,434,152,24">
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#17202A" Offset="0.0"/>
+                        <GradientStop Color="CadetBlue" Offset="1.2"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <TextBlock Margin="49,446,293,36" Text="Ingresar" Foreground="White" FontFamily="Fonts/#Roboto" FontWeight="SemiBold" FontSize="15"/>
+            <TextBlock Margin="168,446,168,36" Text="Despejar" Foreground="White" FontFamily="Fonts/#Roboto" FontWeight="SemiBold" FontSize="15"/>
+            <TextBlock Margin="293,447,45,34" Text="Cancelar" Foreground="White" FontFamily="Fonts/#Roboto" FontWeight="SemiBold" FontSize="15"/>
+            <Button x:Name="butIng" HorizontalAlignment="Left" Margin="24,434,0,0" VerticalAlignment="Top" Height="42" Width="108" Background="Transparent" BorderThickness="2" Visibility="Visible" Style="{StaticResource ButtonTheme}" Click="butIng_Click"/>
+            <Button x:Name="butCan" HorizontalAlignment="Left" Margin="270,433,0,0" VerticalAlignment="Top" Height="43" Width="108" Background="Transparent" BorderThickness="2" Visibility="Visible" Style="{StaticResource ButtonTheme}" Click="butCan_Click"/>
+            <Button x:Name="ButLim" HorizontalAlignment="Center" Margin="0,433,0,0" VerticalAlignment="Top" Height="44" Width="96" Background="Transparent" BorderThickness="2" Visibility="Visible" Style="{StaticResource ButtonTheme}" Click="ButLim_Click" />
+
+        </Grid>
+    </Border>
+
+</Window>
+

@@ -1,0 +1,254 @@
+﻿<UserControl x:Class="SoftUI.MVVM.View.Cons_Producto"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoftUI.MVVM.View"
+             xmlns:viewModel="clr-namespace:SoftUI.MVVM.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="900">
+
+
+    <UserControl.DataContext>
+        <viewModel:MainViewModel/>
+    </UserControl.DataContext>
+
+
+    <StackPanel>
+
+        <Grid>
+
+            <ContentControl x:Name="ConsProd" Margin="0,0,0,-454" Visibility="Visible"/>
+
+        </Grid>
+
+
+        <StackPanel x:Name="Main">
+
+            <TextBlock Text="Gestiona tu Inventario"
+           Foreground="White"
+           FontSize="28"
+
+           Margin="0,5,400,0"
+           FontFamily="/Fonts/#Roboto" FontWeight="SemiBold" Width="424"
+                       HorizontalAlignment="Stretch">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <StackPanel Orientation="Horizontal"
+                    Height="410"
+                    Width="288"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,20,0">
+                <Grid Width="288" Height="408" VerticalAlignment="Top">
+
+                    <Border
+                        Height="73"
+                        VerticalAlignment="Top"
+                        Margin="56,20,57,0">
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,3">
+                                <GradientStop Color="#71ab23" Offset="0.20"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <TextBlock Text="Nuevo Producto"
+                               Foreground="White"
+                               FontSize="20" 
+                               HorizontalAlignment="Center"     
+                               FontFamily="/Fonts/#Roboto" FontWeight="SemiBold"  Margin="0,20,0,20">
+                            <TextBlock.Effect>
+                                <DropShadowEffect/>
+                            </TextBlock.Effect>
+
+                        </TextBlock>
+
+                    </Border>
+
+
+
+                    <Button x:Name="ButNueProd"
+                    Height="73"
+                    VerticalAlignment="Top"
+                    BorderThickness="3"
+                    Visibility="Visible"
+                    Cursor="Hand"
+                    Background="Transparent" Margin="56,20,56,0"
+                    Style="{StaticResource ButtonTheme}" Click="ButNueProd_Click"/>
+
+                    <Border
+                        Height="71"
+                        VerticalAlignment="Top"
+                        Margin="58,110,56,0">
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="#0689e4" Offset="0.20"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <TextBlock Text="Editar Producto"
+                               Foreground="White"
+                               FontSize="20" 
+                               HorizontalAlignment="Center"
+                               FontFamily="/Fonts/#Roboto" FontWeight="SemiBold"  Margin="0,20,0,20">
+                            <TextBlock.Effect>
+                                <DropShadowEffect/>
+                            </TextBlock.Effect>
+
+                        </TextBlock>
+
+
+                    </Border>
+
+                    <Button x:Name="ButEdProd"
+                        Height="71"
+                        VerticalAlignment="Top"
+                        BorderThickness="3"
+                        Visibility="Visible"
+                        IsEnabled="False"
+                        Cursor="Hand"
+                        Background="Transparent"
+                        Margin="56,110,57,0"
+                        Style="{StaticResource ButtonTheme}" Click="ButEdProd_Click"/>
+
+
+                    <Border
+                        Height="70"
+                        VerticalAlignment="Top"
+                        Margin="59,290,55,0">
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="DarkOrange" Offset="0.20"/>
+                                <GradientStop Color="Black" Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <TextBlock Text="Volver"
+                               Foreground="White"
+                               FontSize="20"  
+                               Margin="56,20,0,20"
+                               HorizontalAlignment="Left"
+                               FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                            <TextBlock.Effect>
+                                <DropShadowEffect/>
+                            </TextBlock.Effect>
+
+                        </TextBlock>
+
+
+                    </Border>
+
+                    <Border Height="70"
+                            VerticalAlignment="Top"
+                            Margin="58,200,56,0">
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="DarkRed" Offset="0.20"/>
+                                <GradientStop Color="Black" Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <TextBlock Text="Eliminar"
+                                   Foreground="White"
+                                   FontSize="20" Margin="0,20,0,20"
+                                   HorizontalAlignment="Center"
+                                   FontFamily="/Fonts/#Roboto" FontWeight="SemiBold">
+                            <TextBlock.Effect>
+                                <DropShadowEffect/>
+                            </TextBlock.Effect>
+
+                        </TextBlock>
+
+
+                    </Border>
+
+                    <Button x:Name="ButRegre"
+                        Height="70"
+                        VerticalAlignment="Top"
+                        BorderThickness="3"
+                        Visibility="Visible"
+                        Cursor="Hand"
+                        Background="Transparent" 
+                        Margin="58,290,55,0"
+                        Click="ButRegre_Click"
+                        Style="{StaticResource ButtonTheme}"/>
+                    <Button x:Name="ButEli"
+                        Height="70"
+                        VerticalAlignment="Top"
+                        BorderThickness="3"
+                        Visibility="Visible"
+                        IsEnabled="False"
+                        Cursor="Hand"
+                        Background="Transparent"
+                        Margin="57,200,56,0"
+                        Style="{StaticResource ButtonTheme}" Click="ButEli_Click"/>
+
+
+
+                </Grid>
+
+
+
+
+
+
+            </StackPanel>
+
+            <Grid Height="385"
+              Width="463" 
+              HorizontalAlignment="Left"  
+              Margin="0,-450,0,0">
+
+                <DataGrid x:Name="GridInv" 
+                          AutoGenerateColumns="False"
+                          AutoGeneratingColumn="DataGrid_AutoGeneratingColumn" 
+                          SelectionChanged="GridInv_SelectionChanged"
+                          Margin="19,20,-155,-14"
+                          IsReadOnly="True"
+                          FontFamily="/Fonts/#Roboto"
+                          FontSize="13"
+                          CanUserResizeColumns="False"
+                          CanUserReorderColumns="True" Background="#FF181921">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding IdProducto}" Visibility="Hidden" Width="92"/>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="150"/>
+                        <DataGridTextColumn Header="Fecha Ingreso" Binding="{Binding FechaIngreso}" Width="100"/>
+                        <DataGridTextColumn Header="Valor Unidad" Binding="{Binding ValorPorUnidad}" Width="100"/>
+                        <DataGridTextColumn Header="Valor Total" Binding="{Binding ValorTotal}" Width="100"/>
+                        <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}" Width="100"/>
+                    </DataGrid.Columns>
+
+                    <DataGrid.Effect>
+                        <DropShadowEffect/>
+                    </DataGrid.Effect>
+
+                </DataGrid>
+
+            </Grid>
+
+            <Grid Height="31"
+                  Width="383"
+                  Margin="330,-850,0,0" RenderTransformOrigin="0.475,0.464">
+
+
+
+
+            </Grid>
+
+
+
+
+        </StackPanel>
+
+    </StackPanel>
+
+</UserControl>
